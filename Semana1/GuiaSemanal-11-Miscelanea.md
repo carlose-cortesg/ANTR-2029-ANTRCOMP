@@ -11,10 +11,7 @@
 	- [IDE](#sección-22)
 	- [Git](#sección-23)
 	- [Markdown](#sección-24)
-	- 
-
-
-
+	
 ### 📈[Objetivo Semanal](#sección-1)
 
 
