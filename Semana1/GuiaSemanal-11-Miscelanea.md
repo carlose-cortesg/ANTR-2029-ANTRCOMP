@@ -54,13 +54,13 @@ Git es una herramienta compleja con mucha profundidad, nos vamos a centrar en el
 #### [Markdown](#sección-24)
 > ¿Por qué no podemos utilizar word como el resto de seres humanos?
 ##### ¿Qué?
-El Markdown es una forma sencilla de dar formato al texto en plataformas en línea, como foros, redes sociales o blogs, sin necesidad de aprender complicadas etiquetas de HTML. Te permite resaltar palabras, crear listas, agregar enlaces y mucho más utilizando un formato de escritura simple y fácil de entender.
+El Markdown es una forma sencilla de dar formato al texto en plataformas en línea, como foros, redes sociales o blogs, sin necesidad de aprender complicadas etiquetas de HTML. Permite resaltar palabras, crear listas, agregar enlaces y mucho más utilizando un formato de escritura simple y fácil de entender.
 
 Aquí tienes algunos ejemplos:
 
--   Para hacer una palabra **negrita**, simplemente pon dos asteriscos o guiones bajos al principio y al final de la palabra: `**negrita**` o `__negrita__`.
--   Para hacer una palabra _cursiva_, solo pon un asterisco o guión bajo al principio y al final de la palabra: `*cursiva*` o `_cursiva_`.
--   Para crear una lista, solo coloca un guión al principio de cada línea: `- elemento 1`, `- elemento 2`, etc.
+-   Para hacer una palabra **negrita**,  dos asteriscos o guiones bajos al principio y al final de la palabra: `**negrita**` o `__negrita__`.
+-   Para hacer una palabra _cursiva_, un asterisco o guión bajo al principio y al final de la palabra: `*cursiva*` o `_cursiva_`.
+-   Para crear una lista, un guión al principio de cada línea: `- elemento 1`, `- elemento 2`, etc.
 -   Para crear un enlace, utiliza corchetes para el texto del enlace seguido de paréntesis para la URL: `[texto del enlace](URL)`.
 
 ##### ¿Cómo?
