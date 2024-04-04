@@ -49,7 +49,7 @@ Un sistema de control de versiones distribuido embedido en una herramienta local
 > 
 Información tomada de (https://learn.microsoft.com/es-es/devops/develop/git/what-is-git)
 ##### ¿Cómo?
-Git es una herramienta compleja con mucha profundidad, nos vamos a centrar en el uso de una interfaz online `github` con una serie de comandos necesarios para el desarrollo computacional colaborativo. Con la misma podremos tener visibilidad en el desarrollo de la clase como equipo. En el siguiente [link](https://github.com/ANTR-2029-ANTRCOMP/blob/main/Utils/GuiadeGit1.md) vamos a compilar los recursos necesarios para utilizar git.
+Git es una herramienta compleja con mucha profundidad, nos vamos a centrar en el uso de una interfaz online `github` con una serie de comandos necesarios para el desarrollo computacional colaborativo. Con la misma podremos tener visibilidad en el desarrollo de la clase como equipo. En el siguiente [link](https://github.com/carlose-cortesg/ANTR-2029-ANTRCOMP/blob/0ab4336b74b2480e614b8e20f14d9688592feca8/Utils/GuiadeGit1.md) vamos a compilar los recursos necesarios para utilizar git.
 
 #### [Markdown](#sección-24)
 > ¿Por qué no podemos utilizar word como el resto de seres humanos?
