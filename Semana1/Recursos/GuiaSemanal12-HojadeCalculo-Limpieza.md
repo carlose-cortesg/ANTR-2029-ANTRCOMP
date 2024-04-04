@@ -37,73 +37,106 @@ La principal diferencia entre una hoja de cálculo y una base de datos radica en
 ### Formulas útiles para limpieza de datos
 
 #### Separar datos por columnas
-#### Codificación
-#### Transformación númerica
+
+Selecciona las Celdas: Primero, selecciona las celdas que contienen el texto que deseas separar. Puede ser una única celda, un grupo de celdas contiguas o una columna entera.
+
+- Accede a Texto en Columnas: Ve a la pestaña "Datos" en la cinta de opciones de Excel. Haz clic en "Texto en columnas", que se encuentra en el grupo "Herramientas de datos".
+
+- Elige el Tipo de Datos: Se abrirá el asistente para convertir texto en columnas. En el primer paso, selecciona si tu texto es "Delimitado" (por ejemplo, separado por comas, espacios, etc.) o "Ancho fijo" (donde deseas dividir el texto en columnas en ubicaciones fijas). Haz clic en "Siguiente".
+
+- Establece los Delimitadores: Si elegiste texto "Delimitado", ahora debes especificar qué delimitadores usa tu texto (por ejemplo, comas, espacios, tabulaciones, etc.). Marca las casillas correspondientes a tus delimitadores y haz clic en "Siguiente".
+
+![Paso 1 para separar datos](image.png)
+
+![Paso 2 para separar datos](image-1.png)
+
+![Paso 2 para separar datos - delimitador](image-2.png)
+
+> En español un numero se dice 4 coma 9, mientras que en inglés es 4 punto 9
+
+![Paso 3 para separar datos - datos númericos](image-3.png)
+
 #### Estandarización
 
 1. TRIM
 
 La función TRIM elimina los espacios en blanco adicionales alrededor de un texto, lo que es útil para limpiar datos que pueden contener espacios innecesarios.
 
-
-
+```
 =ESPACIOS(texto)
+```
+
 
 2. MINUSC
 
 La función MINUSC convierte texto a minúsculas, lo que es útil para estandarizar la capitalización del texto en una columna.
 
-excel
-
+```
 =MINUSC(texto)
+```
+
 
 3. MAYUSC
 
 La función MAYUSC convierte texto a mayúsculas, lo que es útil para estandarizar la capitalización del texto en una columna.
 
-excel
-
+```
 =MAYUSC(texto)
+```
 
 4. NOMPROPIO
 
 La función NOMPROPIO convierte el primer carácter de cada palabra en un texto en mayúscula y el resto en minúsculas. Es útil para formatear correctamente nombres y títulos.
 
-excel
-
+```
 =NOMPROPIO(texto)
+```
 
 5. CONCATENAR o &
 
 Estas funciones permiten concatenar o unir texto de diferentes celdas en una sola celda. Son útiles para combinar datos de múltiples columnas en un formato específico.
 
-excel
-
+```
 =CONCATENAR(texto1, texto2, ...)
-= texto1 & texto2 & ...
+```
 
 6. IZQUIERDA, DERECHA y EXTRAE
 
 Estas funciones extraen partes de un texto basado en su posición. IZQUIERDA extrae caracteres desde el inicio del texto, DERECHA desde el final y EXTRAE desde una posición específica.
 
-excel
-
+```
 =IZQUIERDA(texto, num_caracteres)
 =DERECHA(texto, num_caracteres)
 =EXTRAE(texto, inicio, num_caracteres)
+```
 
 7. SUSTITUIR
 
 La función SUSTITUIR reemplaza una parte de un texto con otro texto especificado. Es útil para reemplazar caracteres no deseados o corregir errores en los datos.
 
-excel
-
+```
 =SUSTITUIR(texto, texto_a_reemplazar, nuevo_texto)
+```
 
 8. LIMPIAR
 
 La función LIMPIAR elimina todos los caracteres no imprimibles del texto, lo que puede ser útil para limpiar datos que contienen caracteres invisibles.
 
-excel
-
+```
 =LIMPIAR(texto)
+```
+
+9. Separar columnas
+
+[Tutorial de nombres](https://support.microsoft.com/es-es/office/dividir-texto-en-columnas-diferentes-con-funciones-49ec57f9-3d5a-44b2-82da-50dded6e4a68
+)
+
+10. Quitar acentos o como anidar funciones
+
+Este ejemplo solo reemplaza las tildes de las vocales minúsculas. Deberías añadir más funciones SUSTITUIR para cubrir mayúsculas y otras letras con tildes.
+
+```
+=SUSTITUIR(SUSTITUIR(SUSTITUIR(SUSTITUIR(SUSTITUIR(A1, "á", "a"), "é", "e"), "í", "i"), "ó", "o"), "ú", "u")
+```
+
+
