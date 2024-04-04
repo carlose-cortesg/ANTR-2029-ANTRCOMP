@@ -31,7 +31,6 @@ Esto creará una copia del repositorio en la máquina local y configurará autom
 
 Una vez que se hayan realizado cambios en los archivos locales, se deben agregar esos cambios al área de trabajo para prepararlos para ser confirmados. Se utiliza el comando `add` seguido del nombre del archivo o el punto (`.`) para agregar todos los archivos modificados:
 
-bash
 
 `git add <nombre_del_archivo>` 
 
@@ -39,15 +38,12 @@ bash
 
 Después de agregar los cambios al área de trabajo, se debe confirmar con un mensaje descriptivo utilizando el comando `commit`:
 
-bash
-
 `git commit -m "Mensaje descriptivo aquí"` 
 
 ### 4. Enviar Cambios al Repositorio Remoto (`push`)
 
 Una vez se hayan confirmado cambios localmente, se deben enviar al repositorio remoto utilizando el comando `push`:
 
-bash
 
 `git push` 
 
@@ -57,10 +53,10 @@ Esto actualizará el repositorio remoto con tus cambios locales.
 
 Dado que estamos trabajando en un proyecto con varios colaboradores se deben fusionar los cambios con los otros cambios del resto de ramas, puedes utilizar el comando `merge`. Primero, cambia a la rama que deseas fusionar y luego ejecuta el comando `merge` seguido del nombre de la rama que deseas fusionar:
 
-bash
-
-`git checkout <nombre_de_la_rama>
-git merge <otra_rama>` 
+```
+git checkout <nombre_de_la_rama> 
+git merge <otra_rama>
+```
 
 ### 6. Obtener Cambios del Repositorio Remoto (`pull`)
 
