@@ -1,4 +1,5 @@
 # GIT 101
+## Manejo de Versiones
 
 Mediante GIT podemos comenzar a colaborar en proyectos, realizar seguimiento de cambios y mantener nuestra base de código organizado. Recordemos que el código es la forma en cómo los seres humanos comunicamos a otros seres humanos cómo interactuamos cón máquinas. Entre mas ordenado, mas personas pueden entender cómo funciona y colaborar a la vez.
 
