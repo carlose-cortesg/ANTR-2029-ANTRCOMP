@@ -3,7 +3,7 @@
 ## ¿Qué es? 
 Una hoja de cálculo es una herramienta informática que permite organizar, analizar y manipular datos de manera tabular. Consiste en una cuadrícula de celdas, donde cada celda puede contener datos, fórmulas, funciones o formatos específicos. Existen muchas formas de hojas de cálculo,  Google Sheets y Microsoft Excel son lo mas usados por todo tipo de usuario
 
-## ¿Que no es?
+## ¿Qué no es?
 
 La principal diferencia entre una hoja de cálculo y una base de datos radica en su estructura y funcionalidad:
 
@@ -92,7 +92,7 @@ La función NOMPROPIO convierte el primer carácter de cada palabra en un texto 
 =NOMPROPIO(texto)
 ```
 
-5. CONCATENAR o &
+5. CONCATENAR
 
 Estas funciones permiten concatenar o unir texto de diferentes celdas en una sola celda. Son útiles para combinar datos de múltiples columnas en un formato específico.
 
