@@ -5,5 +5,5 @@ Pueden contactarme en: l.fernandezj@uniandes.edu.co
 
 En el campo del derecho me interesa el derecho público y, en particular, la contratación estatal⚖️ y el derecho tributario🏛️.
 No soy un gran deportista, pero disfruto el polo 🏇 y el tenis 🎾
-No hay mejor plan que tomar vino🍷 y oír música con amigos🎵
+¡No hay mejor plan que tomar vino🍷 y oír música con amigos🎵!
 
