@@ -15,3 +15,8 @@ Hola, mi nombre es Luna Esmeralda Torres Solarte
 
 - ⚡ Dato curioso sobre mí *mi nombre completo se puede dibujar* 🌙💚🗼☀️🎨
 ___
+**Mis pasatiempos son:**
+-Bailar K-pop🐰
+-Hacer postres🍪🍩🍰
+-Pasear con mi perrito🐶
+-Jugar Valorant🧍‍♀️
