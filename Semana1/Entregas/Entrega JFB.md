@@ -1,6 +1,7 @@
 # Entrega 1 JFBC 
-## Prueba 1
-Hola! 🦦 mi nombre es Juan Francisco Bernal 
+## Prueba de encabezado
+Hola! 🦦 mi nombre es Juan Francisco Bernal
+También me dicen Pacho 🦧
 Antropologo colombiano de noveno semestre
 Intereses orientados a la investigación cuantitativa, cualitativa y la antropología urbana
 También, a veces, hago documentales y otros productos audiovisuales.
