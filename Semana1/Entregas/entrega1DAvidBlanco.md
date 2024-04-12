@@ -10,4 +10,5 @@
 -😎**No me gusta el pescado por temor a sus espinas**
 -🙌 No se bailar salsa y algunos otros ritmos, pero aprendo rapido
 - 😎Los estudiantes de los Andes somos los mejores.
+-😒Soy foraneo, antes vivia en Medina-Cundinamarca, un pueblito con un clima muy agradable ubicado por la via al llano.
 - 👌este es el link de informacion sobre mi libro favorito [google] (https://es.wikipedia.org/wiki/Odisea)
