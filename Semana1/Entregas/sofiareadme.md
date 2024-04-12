@@ -2,7 +2,7 @@
 Hola! Mi nombre es Sofía Biermann
 Soy antropóloga y politóloga de 9 semestre
 Actualmente estoy haciendo mi tesis🤓, es sobre arte🎨 en la cárcel
-[Este es el link de un proyecto cool que se hizo en la cárcel distrital] {https://www.youtube.com/watch?v=f-jvTyFstD4} 
+Este es el link de un proyecto cool que se hizo en la cárcel distrital [Link youtube] {https://www.youtube.com/watch?v=f-jvTyFstD4} 
 Me encanta el arte, la literatura y la fotografía📷
 Mi artista favorito es Henri Matisse, y las fotos de Platon son muy cool🗿
 He trabajado en temas de construcción de paz y memoria histórica📚
