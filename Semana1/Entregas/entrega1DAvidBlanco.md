@@ -20,4 +20,64 @@ al llano.
 
 
 - 👌este es el link de informacion sobre mi libro favorito [google] (https://es.wikipedia.org/wiki/Odisea)
+    +-------------------------+
+    |                         |
+    |  Restaurantes           |
+    |  (Proveedores de        |
+    |  residuos orgánicos)    |
+    |                         |
+    +-----------+-------------+
+                |
+                |
+    +-----------v-------------+
+    |                         |
+    |  Equipo de recolección  +-----------------------------------+
+    |  y transporte           |                                   |
+    |                         |                                   |
+    +-----------+-------------+                                   |
+                |                                                 |
+                |                                                 |
+    +-----------v-------------+                                   |
+    |                         |                                   |
+    |  Instalaciones de       |                                   |
+    |  compostaje             +-----------------------------------+
+    |  (Finca o lugar de      |
+    |  procesamiento)         |
+    |                         |
+    +-----------+-------------+
+                |
+                |
+    +-----------v-------------+
+    |                         |
+    |  Proceso de compostaje  |
+    |  y producción de        |
+    |  compost                |
+    |                         |
+    +-----------+-------------+
+                |
+                |
+    +-----------v-------------+
+    |                         |
+    |  Equipo de ventas y     |
+    |  relaciones con clientes| <---+
+    |                         |     |
+    +-------------------------+     |
+                                     |
+                                     |
+    +-------------------------+     |
+    |                         |     |
+    |  Agricultores, Campesinos|     |
+    |  y otros clientes       |     |
+    |                         |     |
+    +-------------------------+     |
+                                     |
+                                     |
+    +---------------------------------+
+    |                                 |
+    |  Clientes finales (consumidores|
+    |  de productos agrícolas)        |
+    |                                 |
+    +---------------------------------+
+
+
 
