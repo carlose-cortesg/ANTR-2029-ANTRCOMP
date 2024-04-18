@@ -1,0 +1,7 @@
+#Criterios
+1) Los años (como 1995/1996) se selecciona solo el año de finalización.
+2) Los semestres no se tienen en cuenta, solo el año.
+3) Los datos que están vacios se llenan según los datos del contexto.
+4) Frente a la ausencia de datos como Nombre o Goles se borra la fila
+5) Se eliminan las celdas informativas que dicen si son torneos semestrales o anuales
+
