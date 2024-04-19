@@ -8,3 +8,5 @@
 - 🐶 Mi perrita se llama Morai, y es un perro pirata ☠️ porque le falta el ojo izquierdo
 - Para cosas más formales bien puedan contactarme por mi [LinkedIn](https://www.linkedin.com/in/ldvergarav/)
 <h4 align="center">Fin del comunicado 😎</h4>
+
+
