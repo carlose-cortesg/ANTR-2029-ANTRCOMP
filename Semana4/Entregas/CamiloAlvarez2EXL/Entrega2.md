@@ -21,8 +21,9 @@
 ![alt](7ConteodetorneosporD.png)
 
 8. Máximo de goles por equipo: En esta tabla recolecte los equipos que aparecen y recolecta la cantidad de goles de sus jugadores en relación a sus equipos. La tabla se organizo de orden a menor, el equipo con mas goles es millonarios y el equipo con menos goles anotados es la equidad y real cartagena.
-![alt](8MaximodegolesporE .png)
+![alt](8MaximodegolesporE.png)
 
 9. Mínimo número de goles por equipo: Esta tabla recolecta la cantidad mas baja de goles por los equipos que participan, estas variables participan basadas en los goleadores que representan su equipo. Por esto mismo, junto a la gráfica elaborada demuestra que cortulua es el equipo con la mayor cantifdad. Esto sucede ya que la tabla dinámica lee solos las variables recolectadas. Cortulua solo ha tenido un goleador y por eso el único valore registrado son los 19 tantos anotados en el 2016 por Miguel Angel Borja 😆😆
-![alt](9Minimo denumerodeGporE.png)
+![alt](9MinimodenumerodeGporE.png)
+
 
