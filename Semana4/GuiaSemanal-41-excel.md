@@ -21,11 +21,12 @@ El objetivo de la semana es cerrar con el uso satisfactorio de herramientas de h
  - [ ] Utilizar buscarh y buscarv
 
  ### 📗[Entrega 2 y 3 Semana](#sección-3)
- - [ ] Crear una cuenta en [Github](github.com)
- - [ ] Crear un readme personal en Git utilizando Markdown
- - [ ] Crear una cuenta en Loom.com
- - [ ] Limpiar un hoja de cálculo en el software de elección
- - [ ] Documentar el algoritmo utilizando Markdown realizando un PR
+ - Carpeta en Semana 4, con su nombre 
+- 9 preguntas + 1 (la obligatoria) -> por lo menos 3 gráficos
+    - Interpretación del gráfico o la dínamica
+- Formulación BuscarH y BuscarV
+- Entrega en 8 días
+
 
  ### 📗[Uso del análisis computacional en Ciencias Sociales](#sección-4)
  -  [Alex](https://pudding.cool/2024/03/teenagers/)
@@ -108,10 +109,3 @@ Cada parámetro tiene el siguiente significado:
 ![alt text](image-1.png)
 ![alt text](image-2.png)
 
- ### 📗[Entrega](#sección-6)
-
-- Carpeta en Semana 4, con su nombre 
-- 9 preguntas + 1 (la obligatoria) -> por lo menos 3 gráficos
-    - Interpretación del gráfico o la dínamica
-- Formulación BuscarH y BuscarV
-- Entrega en 8 días
