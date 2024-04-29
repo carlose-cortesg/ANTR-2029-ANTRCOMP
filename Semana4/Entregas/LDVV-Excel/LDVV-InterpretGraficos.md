@@ -2,13 +2,35 @@
 
 <h2 align="center"> Laura Daniela Vergara Villa - 201815666 </h2>
 
- 1. **1. Promedio de goles por década**
+## **Contenido**
+
+[1. Promedio de goles por décadas](#1-1-promedio-de-goles-por-década)
+
+[2. Máximo goleador por nacionalidad](#2-3-máximo-goleador-por-nacionalidad)
+
+[3. Promedio de goles por ciudad](#3-6-promedio-de-goles-por-ciudad)
+
+[4. Participación de equipos por década](#4-13-participación-de-equipos-por-década)
+
+[5. Millonarios vs. el Mundo](#5-16-millonarios-vs-el-mundo)
+
+[6. Top 10 de goleadores históricos](#6-21-top-10-de-goleadores-históricos)
+
+[7. História Gráfica de Bogotá](#7-30-historia-gráfica-de-bogotá)
+
+[8. Desviación estándar e intervalo de confianza de goles históricos](#8-35-desviación-estándar-e-intervalo-de-confianza-de-goles-históricos)
+
+[9. Porcentaje de goles por nacionalidad](#9-41a-porcentaje-de-goles-por-nacionalidad)
+
+[10. Promedio de goles por jugador por década](#10-41b-promedio-de-goles-por-jugador-por-década)
+
+ ## 1. *1. Promedio de goles por década*
  
  ![Promedio de goles por década](<Graficos FPC entrega 2/1. Prom Goles Decad.png>)
 
  En la gráfica es notorio cómo a medida que avanzan las décadas, y por ende la práctica del fútbol profesional en Colombia, el promedio de goles va disminuyendo. Esto podría explicarse por motivos como la época de El Dorado entre 1948 y 1953 -cuando figuras de talla internacional participaron en equipos colombianos-, la disminución de la duración de los torneos a partir del 2002 o la profesionalización del fútbol. En la década de los 50 se puede ver una disminución brusca en el promedio de goles para volver a aumentar en los 60, lo que se puede explicar en parte por la decisión de discriminar la cantidad de goles que cada jugador hizo en cada equipo, cuando los jugadores estuvieron en más de un equipo en determinado año -como es el caso de Felipe Marino que solo anotó 2 goles con el Cúcuta Deportivo en 1959.
 
- 2. **3. Máximo goleador por nacionalidad**
+ ## 2. *3. Máximo goleador por nacionalidad*
  
  ![Máximo goleador por nacionalidad](<Graficos FPC entrega 2/3. Max jugador nacionalidad.png>)
 
@@ -16,38 +38,38 @@
  Teniendo esto en cuenta es necesario verificar el tipo de torneo en el que estos jugadores participaron y el tiempo que estuvieron en equipos nacionales, para identificar si las tres nacionalidades mencionadas son en efecto mejores jugadores de fútbol, o si hay otros factores que influyan en esta tendencia, como por ejemplo una posible disminución del tiempo jugado por extranjeros en equipos colombianos o la distribución de extranjeros en posiciones potencialmente goleadoras, como delanteros.
  - **Nota:** Para realizar esta gráfica partí de la tabla dinámica que contenía el número de goles por jugador y nacionalidad, y realicé una nueva tabla utilizando la función MAX para encontrar el mayor número de goles de cada nacionalidad y posteriormente BUSCARX para enlazar el nombre del jugador correspondiente al número de goles encontrado previamente.
 
- 3. **6. Promedio de goles por ciudad**
+ ## 3. *6. Promedio de goles por ciudad*
 
 ![Promedio de goles por ciudad](<Graficos FPC entrega 2/6. Prom goles ciudad.png>)
 
 En este gráfico es posible identificar que la ciudad con mayor promedio de goles históricamente es Bucaramanga, seguido de Pereira, Cúcuta y Bogotá. Esto pone de manifiesto que las lógicas de centro-periferia que usualmente imperan en la realidad colombiana no son determinantes en el caso de los mayores goleadores del fútbol nacional. Así, el triángulo dorado nacional -Bogotá-Medellín-Cali- resulta no ser el territorio con los promedios más altos en términos de goles anotados por sus máximos goleadores, a pesar de concentrar más de la mitad de la población nacional. Es justamente esto lo que puede indicar el aumento del promedio de goles en ciudades medianas, en tanto estas tienen solo equipo local representativo de la categoría A que concentra una considerable suma monetaria disponible para la inversión en jugadores de buen nivel. Esto en contraste con las tres grandes ciudades de Colombia que tienen 2 o 3 equipos locales destacados y miembros de la primera división que se disputan constantemente el título.
 Hace falta información en la gráfica para revisar esta última variable, así como para evaluar a mayor detalle el aspecto relacionado a los equipos de los mayores goleadores en los torneos semestrales, para verificar si esta variable ha tenido incidencia directa en la baja en el número de goles anotados y por ende el promedio de los equipos.
 
- 4. **13. Participación de equipos por década**
+ ## 4. *13. Participación de equipos por década*
 
  ![Participación de equipos por década](<Graficos FPC entrega 2/13. Partici Equi Deca.png>)
 
  Este gráfico presenta el porcentaje de participación de equipos por década. Es posible identificar cómo en la década de los 40 Millonarios tuvo la preeminencia en el número de goles, mientras que para los 50's fue destronado por el Independiente Medellín. Uno de los aspectos que más llama la atención es que la década del 2000 fue la que tuvo la mayor cantidad de equipos con máximos goleadores por torneo, con 17 equipos en total. En casi todas las décadas previas al 2000 los equipos con participación eran entre 6 y 8, por lo que la década del inicio de milenio representa un aumento sustancial de equipos participantes.Esto puede deberse al aumento de torneos desde la década de los 2000 cuando empezaron a ser semestrales y no anuales.
 
- 5. **16. Millonarios vs. el Mundo**
+ ## 5. *16. Millonarios vs. el Mundo*
 
  ![Millonarios vs. el Mundo](<Graficos FPC entrega 2/16.Millos vs el Mundo.png>)
 
  Aquí puede apuntarse que Millonarios tiene un promedio de goles superior al de todos los otros equipos históricamente, lo que indica el alto rendimiento de los goleadores de este equipo. Esto lo ubica como uno de los mejores equipos por cuanto su promedio de goles está por encima de la media.
 
- 6. **21. Top 10 de goleadores históricos**
+## 6. *21. Top 10 de goleadores históricos*
 
 ![Top 10 de goleadores históricos](<Graficos FPC entrega 2/21.Top 10 goleadores.png>)
 
 Esta gráfica presenta el top 10 de goleadores históricos, de los cuales la mitad ha marcado 90 goles o más a lo largo de su trayectoria en el fútbol profesional colombiano. Esto posiciona a Dayro Moreno como el máximo goleador colombiano, con posibilidades de continuar aumentando su ventaja en tanto aún está fichado por el Once Caldas y no ha mostrado signo de querer retirarse.
 
- 7. **30. Historia gráfica de Bogotá**
+ ## 7. *30. Historia gráfica de Bogotá*
  
  ![Historia gráfica de Bogotá](<Graficos FPC entrega 2/30.Historia graf Bogota.png>)
 
  En esta gráfica se evidencia que jugadores de los 3 equipos locales de Bogotá de la primera división han figurado en algún momento de la historia entre los máximos goleadores de los torneos nacionales. Siendo así, Millonarios es el que más veces se ha coronado con este título con 16 veces a lo largo de la historia, seguido de Santa Fé con 7 veces y por último La Equidad, con 4 veces. Adicionalmente, cabe destacar que Millonarios es el equipo bogotano con más goles anotados en un torneo, y que cuentan con jugadores destacados como Jose Maria Ferro o Alfredo Di Stefano. Llama la atención que suele haber bloques de torneos en los que jugadores de un mismo equipo de coronan como máximos goleadores, lo que da a entender que puede tratarse de buenas rachas del equipo en conjunto. Así mismo, la década más desctacada para el fútbol bogotano ha sido la de los 2010's, en tanto en esta se han coronado como máximos goleadores en 8 oportunidades.
 
- 8. **35. Desviación estándar e intervalo de confianza de goles históricos**
+ ## 8. *35. Desviación estándar e intervalo de confianza de goles históricos*
 
 ![Tabla estadística de goles históricos](<Graficos FPC entrega 2/35.DesvEst InterConf.png>)
 
@@ -55,13 +77,13 @@ Esta gráfica presenta el top 10 de goleadores históricos, de los cuales la mit
 
 En este caso se calculó la mediana y no la media de los datos, en tanto hay valores atípicos que afectan sustancialmente el cálculo del promedio y la mediana presenta el valor que está justo en la mitad de todos los datos. Los datos con los que se está trabajando presentan un comportamiento diferente a una curva normal, por lo que el intervalo de confianza el 95% que se muestra en la tabla no representa en efecto que el 68% de los datos totales estén en dicho rango -en este caso entre 16 y 20 goles-, tal como se evidencia en la gráfica. Esta última permite identificar que hay una gran disperción entre los goles anotados, en tanto la mayoría fueron entre 10 y 14, pero también hay otros rangos importantes como de 14 a 18 y de 26 a 30. En ese sentido, los datos estadísticos como el intervalo de confianza y la desviación estándar no resultan muy útiles para analizar el comportamiento de los datos. Podría ser útil revisar por separado los torneos anuales vs los semestrales para ver si de esta forma puede percibirce una tendencia clara, o las fórmulas estadísticas pueden describir mejor el comportamiento de estos datos.
 
- 9. **41.a. Porcentaje de goles por nacionalidad**
+ ## 9. *41.a. Porcentaje de goles por nacionalidad*
  
  ![Porcentaje de goles por nacionalidad](<Graficos FPC entrega 2/41.a.Porc Goles Nac.png>)
 
  En este gráfico se identifica que las dos países con los mayores porcentajes de goles anotados por los máximos goleadores son Argentina y Colombia con 46% y 43% respectivamente. Estas dos nacionalidades concentran casi el 90% del total de goles anotados, lo cual se explica por la mayoritaria participación de jugadores de estas nacionalidades como los máximos goleadores históricamente. Resultaría interesante contrastar esta tendencia respecto al total de jugadores de la liga colombiana de fútbol, para identificar si la mayor participación de jugadores argentinos explica igualmente su alto número de goles totales, o si tienen una baja participación el número de anotaciones puede deberse a un nivel deportivo más alto.
 
- 10. **41.b. Promedio de goles por jugador por década**
+##  10. *41.b. Promedio de goles por jugador por década*
 
 ![Promedio de goles por jugador por década](<Graficos FPC entrega 2/41.b. Prom gol jugador deca.png>)
 
