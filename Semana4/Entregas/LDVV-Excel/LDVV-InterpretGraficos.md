@@ -17,7 +17,7 @@
 
  3. **6. Promedio de goles por ciudad**
 
-![alt text](<Graficos FPC entrega 2/6. Prom goles ciudad.png>)
+![Promedio de goles por ciudad](<Graficos FPC entrega 2/6. Prom goles ciudad.png>)
 
 En este gráfico es posible identificar que la ciudad con mayor promedio de goles históricamente es Bucaramanga, seguido de Pereira, Cúcuta y Bogotá. Esto pone de manifiesto que las lógicas de centro-periferia que usualmente imperan en la realidad colombiana no son determinantes en el caso de los mayores goleadores del fútbol nacional. Así, el triángulo dorado nacional -Bogotá-Medellín-Cali- resulta no ser el territorio con los promedios más altos en términos de goles anotados por sus máximos goleadores, a pesar de concentrar más de la mitad de la población nacional. Es justamente esto lo que puede indicar el aumento del promedio de goles en ciudades medianas, en tanto estas tienen solo equipo local representativo de la categoría A que concentra una considerable suma monetaria disponible para la inversión en jugadores de buen nivel. Esto en contraste con las tres grandes ciudades de Colombia que tienen 2 o 3 equipos locales destacados y miembros de la primera división que se disputan constantemente el título.
 Hace falta información en la gráfica para revisar esta última variable, así como para evaluar a mayor detalle el aspecto relacionado a los equipos de los mayores goleadores en los torneos semestrales, para verificar si esta variable ha tenido incidencia directa en la baja en el número de goles anotados y por ende el promedio de los equipos.
