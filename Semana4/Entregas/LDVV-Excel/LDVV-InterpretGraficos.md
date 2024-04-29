@@ -14,6 +14,7 @@
 
  Esta gráfica permite identificar que el mayor goleador histórico es el colombiano Dayro Moreno, con casi 100 goles anotados en su carrera en el fútbol profesional nacional, seguido muy de cerca por el argentino José María Ferrero, quienes sacan una ventaja sustancial al tercero en el podio: Jose Omar Verdun, de Uruguay. Este último anotó a históricamente el doble de goles que los máximos goleadores de las demás nacionalidades.
  Teniendo esto en cuenta es necesario verificar el tipo de torneo en el que estos jugadores participaron y el tiempo que estuvieron en equipos nacionales, para identificar si las tres nacionalidades mencionadas son en efecto mejores jugadores de fútbol, o si hay otros factores que influyan en esta tendencia, como por ejemplo una posible disminución del tiempo jugado por extranjeros en equipos colombianos o la distribución de extranjeros en posiciones potencialmente goleadoras, como delanteros.
+ - **Nota:** Para realizar esta gráfica partí de la tabla dinámica que contenía el número de goles por jugador y nacionalidad, y realicé una nueva tabla utilizando la función MAX para encontrar el mayor número de goles de cada nacionalidad y posteriormente BUSCARX para enlazar el nombre del jugador correspondiente al número de goles encontrado previamente.
 
  3. **6. Promedio de goles por ciudad**
 
