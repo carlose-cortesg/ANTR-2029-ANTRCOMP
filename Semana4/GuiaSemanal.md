@@ -43,29 +43,29 @@ El objetivo de la semana es cerrar con el uso satisfactorio de herramientas de h
 7. Formulación: BuscarH y BuscarV
 
  ### 📗[42 preguntas](#sección-5)
- 1. Promedio de Goles por década - Obligatoria 
+ ~~1. Promedio de Goles por década - Obligatoria ~~
  2. Top 10 de Torneos con más goleadores
  3. Máximo Goleador por Nacionalidad
- 5. Conteo de Nacionalidad por 
+ 5. Conteo de goles por Nacionalidad 
  6. Promedio de Goles por tipo de torneo
- 7. Promedio de Goles por Ciudad
+~~ 7. Promedio de Goles por Ciudad~~
  8. Suma de Goles por Década
  9. Largo de Nombre de Jugador por Década 
- 10. Tendencia de Goles por Década
+ ~~10. Tendencia de Goles por Década~~
  11. Participación de Equipos Historica
  12. Top Goleador por Década
  13. Top Goleador por Equipo
  14. Participación de Equipos por Década
- 15. Participación historica del Cúcuta Deportivo
- 16. Colombia vs el Mundo
+ ~~15. Participación historica del Cúcuta Deportivo~~
+ ~~16. Colombia vs el Mundo~~
  18. Millonarios vs el Mundo
  19. Jugadores por Número de Goles
  20. Conteo de Goleadores únicos por equipo
  21. Mínimo número de goles por equipo
  22. Máximo de goles por equipo
- 23. Top 10 de goeadores historicos
- 24. Suma de Goles por equipo organizado de mayor a menor
- 25. Goles por Equipo
+ ~~23. Top 10 de goeadores historicos~~
+ ~~24. Suma de Goles por equipo organizado de mayor a menor~~
+ ~~25. Goles por Equipo~~
  25. Conteo de Torneos por década
  26. Conteo de Botines de oro por equipo
  27. Conteo de Botines de oro únicos por equipo
@@ -73,9 +73,9 @@ El objetivo de la semana es cerrar con el uso satisfactorio de herramientas de h
  29. Historia grafica del Bucaramanga
  30. Historia Gráfica de Ivan Rene Valenciano
  31. Historía Gráfica de Bógota
- 32. Historia Gráfica de Medellín
- 33. Historia de los Torneos Cortos en Goles
- 34. Top 10 goleadores de Millonarios
+ ~~32. Historia Gráfica de Medellín~~
+ ~~33. Historia de los Torneos Cortos en Goles~~
+ ~~34. Top 10 goleadores de Millonarios~~
  35. Gráfico decente de goles por año
  36. Desviación Estandar e Intervalo de Confianza por Goles
  37. Goleadores únicos por país
