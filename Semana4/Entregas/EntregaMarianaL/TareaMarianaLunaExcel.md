@@ -39,3 +39,5 @@ Luego, organicé por la suma de goles de menor a mayor la tabla haciendo clic de
 - Pregunta 10: ¿Cuál es el promedio de goles por jugador? Inserté una tabla dinámica. Ubiqué en filas a los jugadores y en valores los goles bajo la configuración de campo de promedio. Después, ordené en sentido ascendente haciendo clic derecho en etiquetas de fila, y cambiando el orden a la columna del promedio de goles. Finalmente, inserté una gráfica de barras y la estilicé para mostrar visualmente cuál era el promedio por cada jugador de goles, pero no logré que hubiera una línea adicional en la gráfica del promedio de goles por jugador total para comparar el rendimiento de cada jugador con respecto de este promedio.
 [Imagen A P10]('./Tabla A P10.png')
 [Imagen A P10]('./Tabla B P10.png')
+
+---
