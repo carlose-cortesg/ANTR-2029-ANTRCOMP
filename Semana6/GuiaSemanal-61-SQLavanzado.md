@@ -24,18 +24,29 @@ El objetivo de la semana es practicar nociones de SQL + seguir familiriandoze co
  - [ ] Construir gráficos rudimentarios que nos permitan resumir los datos.
 
 ### 📈[Usos y abusos de la clase](#sección-3)
+
+ -  [Complejidad Presidencial](https://bastian.rieck.me/blog/2017/inauguration_speeches_brief/)
+
+ ### 🎶🎶 [Base de Datos para el Semestre: Spotify Million Playlists - Editada](#sección-4)
+
+
 Buenas Noticias:
  -  [Google Colab](https://colab.research.google.com/?hl=es)
 
  1. Suben la base de datos
  2. Copian y pegan los comandos para instalar y crear la conexión
- 3. Me mandan por correo la URL para que yo pueda revisar
- 4. Sin PR
+ 3. Descargan el cuaderno como py para crear el PR  + incluir el PR el link como ipnyb
+
+```
+from google.colab import drive
+drive.mount('/content/drive')
+```
+
+```
+%sql  sqlite:////content/drive/My Drive/path_to_your_database.db
+```
 
 
-
- ### 🎶🎶 [Base de Datos para el Semestre: Spotify Million Playlists - Editada](#sección-4)
- - Google Collab: [Complejidad Presidencial](https://bastian.rieck.me/blog/2017/inauguration_speeches_brief/)
 
  - Consumir este link en Onedrive [Spotify Million Playlist Challenge](https://uniandes-my.sharepoint.com/:u:/g/personal/ce_cortes410_uniandes_edu_co/EUtFzWyn3AhJt1rcs18CjUYBErNiPFnzlPNhnLfPRHXiFg?e=4qhvaI)
 
@@ -66,6 +77,7 @@ GROUP BY MONTH(fecha_venta);
 En este ejemplo, estamos agrupando las ventas por mes usando la función MONTH() para extraer el mes de la columna "fecha_venta". Luego, calculamos la suma de los montos de ventas para cada mes usando la función de agregación SUM().
 
 Utilizando la tabla de playlists, podríamos querer calcular el número total de canciones en cada playlist. Aquí está cómo lo haríamos:
+
 ```
 SELECT pid,
        COUNT(*) AS total_canciones
