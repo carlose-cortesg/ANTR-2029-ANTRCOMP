@@ -99,6 +99,7 @@ LIMIT 10
 
 
  ### 📗[42 preguntas](#sección-6)
+
 - Bloque 1
 1. Top 20 de Playlists mas Recientes -> Utilizar modified at mayor que
 2. Contar el número total de playlists -> Utilizar COUNT() 
@@ -140,8 +141,5 @@ LIMIT 10
 7. Contar la cantidad de artistas que tienen mas de una canción vs los que tienen sólo una canción
 8. Contar la cantidad de playlists que contienen más de una canción de un álbum específico
 9. Calcular la duración total de todas las canciones en playlists con más de 50 tracks
-
-
-
 
 
