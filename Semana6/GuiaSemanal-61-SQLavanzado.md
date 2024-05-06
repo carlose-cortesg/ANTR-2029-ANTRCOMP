@@ -24,10 +24,18 @@ El objetivo de la semana es practicar nociones de SQL + seguir familiriandoze co
  - [ ] Construir gráficos rudimentarios que nos permitan resumir los datos.
 
 ### 📈[Usos y abusos de la clase](#sección-3)
- -  [Complejidad Presidencial](https://bastian.rieck.me/blog/2017/inauguration_speeches_brief/)
+Buenas Noticias:
+ -  [Google Colab](https://colab.research.google.com/?hl=es)
+
+ 1. Suben la base de datos
+ 2. Copian y pegan los comandos para instalar y crear la conexión
+ 3. Me mandan por correo la URL para que yo pueda revisar
+ 4. Sin PR
+
+
 
  ### 🎶🎶 [Base de Datos para el Semestre: Spotify Million Playlists - Editada](#sección-4)
- - El [Spotify Million Playlist Challenge](https://research.atspotify.com/2020/09/the-million-playlist-dataset-remastered/) es una estructura de datos interesantisima que contiene metadatos de un millón de listas creadas en Spotify + las canciones que la componen(con sus respectivos metadatos). El objetivo del conjunto de datos es crear un _sandbox_ de algoritmos, abierto al público, en el problema de sistemas de recomendación. ¿Que es un modelo de recomendación? Es el modelo que permite predecir que después de escuchar Peso Pluma en el 99% de los casos el usuario no quiere escuchar Justice, Judas Priest o Disclosure. Para nuestro curso es maravilloso para practicar técnicas de exploración y de análitca básica en conjuntos de datos estructurados.
+ - Google Collab: [Complejidad Presidencial](https://bastian.rieck.me/blog/2017/inauguration_speeches_brief/)
 
  - Consumir este link en Onedrive [Spotify Million Playlist Challenge](https://uniandes-my.sharepoint.com/:u:/g/personal/ce_cortes410_uniandes_edu_co/EUtFzWyn3AhJt1rcs18CjUYBErNiPFnzlPNhnLfPRHXiFg?e=4qhvaI)
 
