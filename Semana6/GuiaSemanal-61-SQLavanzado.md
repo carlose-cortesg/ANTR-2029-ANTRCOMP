@@ -55,6 +55,50 @@ drive.mount('/content/drive')
 ![alt text](image.png)
 
 
+### Utilizar SELECT DISTINCT
+
+Para mostrar cómo usar la cláusula SELECT DISTINCT en una base de datos SQLite que contiene información de playlists y canciones, podemos hacer una consulta que extraiga información única de ciertos campos. Por ejemplo, podríamos querer obtener los nombres únicos de los artistas o los álbumes de las canciones en todas las playlists.
+
+ SELECT DISTINCT es útil para eliminar duplicados y obtener un conjunto de valores únicos para análisis o revisión.
+
+#### Ejemplo 1: Nombres Únicos de Artistas
+
+Esta consulta muestra todos los nombres únicos de los artistas que aparecen en la base de datos:
+
+
+```
+SELECT DISTINCT artist_name 
+FROM songs;
+```
+
+#### Ejemplo 2: Nombres Únicos de Álbumes
+
+Esta consulta muestra todos los nombres únicos de los artistas que aparecen en la base de datos:
+
+
+```
+SELECT DISTINCT album_name 
+FROM songs;
+```
+Notas Adicionales
+
+#### WHERE múltiples valores
+   
+Para filtrar resultados en SQL basándote en múltiples valores para una columna específica, se puede usar el operador IN dentro de la cláusula WHERE. Esto permite especificar varios valores en una lista, y SQL retornará filas que tengan cualquiera de esos valores en la columna especificada.
+
+Supongamos que quieres seleccionar todas las canciones de unos artistas específicos en tu base de datos. Podrías escribir una consulta para seleccionar pistas de, digamos, "Beyoncé", "Usher", y "Chris Brown".
+
+```
+SELECT * FROM songs WHERE artist_name IN ('Beyoncé', 'Usher', 'Chris Brown');
+
+```
+
+- Explicación
+
+    SELECT * FROM songs: Esto selecciona todas las columnas y filas de la tabla songs.
+    WHERE artist_name IN (...): Esto limita las filas retornadas a aquellas donde el artist_name sea igual a cualquiera de los valores listados entre paréntesis.
+
+
 #### GROUP BY
 
 Por supuesto, la cláusula GROUP BY en SQL se utiliza para agrupar filas que comparten un valor común en una o más columnas y realizar operaciones de agregación en esos grupos. Esto nos permite calcular estadísticas resumidas sobre cada grupo de datos.
@@ -201,6 +245,42 @@ JOIN Songs ON Playlists.pid = Songs.pid;
 ```
 
 En este ejemplo, estamos combinando las tablas de "Playlists" y "Songs" utilizando la cláusula JOIN. La condición de unión es que el "pid" en la tabla de "Playlists" sea igual al "pid" en la tabla de "Songs". Esto nos permite obtener el nombre de la playlist junto con el nombre de todas las canciones en esa playlist.
+
+#### Ejemplo Uso combinado de WITH y JOIN
+
+informe de las playlists junto con los nombres de los artistas y el nombre de las canciones, pero solo para playlists que contengan más de 50 canciones.
+Usando WITH y JOIN
+
+La cláusula WITH, también conocida como Common Table Expression (CTE), es útil para definir una consulta temporal que se usará en la consulta principal. Combinaremos esto con un JOIN para fusionar datos de dos tablas diferentes de manera efectiva.
+
+```
+WITH SelectedPlaylists AS (
+    SELECT pid, name
+    FROM playlists
+    WHERE num_tracks > 50
+)
+
+SELECT sp.name AS PlaylistName, s.artist_name, s.track_name
+FROM SelectedPlaylists sp
+JOIN playlist_songs ps ON sp.pid = ps.playlist_id
+JOIN songs s ON ps.song_id = s.id;
+```
+
+Explicación de la Consulta
+
+    WITH Clause (CTE):
+        SelectedPlaylists: Es el nombre de la CTE que define una tabla temporal que contiene pid (ID de la playlist) y name (nombre de la playlist) de todas las playlists que tienen más de 50 canciones.
+
+    SELECT Statement:
+        Selecciona el nombre de la playlist, el nombre del artista y el nombre de la canción.
+
+    FROM Clause:
+        La consulta principal está extrayendo datos de la CTE SelectedPlaylists.
+
+    JOIN Operations:
+        Primero se realiza un JOIN entre SelectedPlaylists y playlist_songs para vincular las playlists seleccionadas con sus correspondientes canciones usando pid y playlist_id.
+        Luego, se hace un segundo JOIN con la tabla songs para obtener los detalles de cada canción usando song_id.
+
 
  ### 📗[42 preguntas](#sección-5)
  3 - 4 - 3
