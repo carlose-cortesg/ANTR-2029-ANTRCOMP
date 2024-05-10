@@ -55,6 +55,7 @@ drive.mount('/content/drive')
 ![alt text](image.png)
 
 
+
 ### Utilizar SELECT DISTINCT
 
 Para mostrar cómo usar la cláusula SELECT DISTINCT en una base de datos SQLite que contiene información de playlists y canciones, podemos hacer una consulta que extraiga información única de ciertos campos. Por ejemplo, podríamos querer obtener los nombres únicos de los artistas o los álbumes de las canciones en todas las playlists.
@@ -246,6 +247,7 @@ JOIN Songs ON Playlists.pid = Songs.pid;
 
 En este ejemplo, estamos combinando las tablas de "Playlists" y "Songs" utilizando la cláusula JOIN. La condición de unión es que el "pid" en la tabla de "Playlists" sea igual al "pid" en la tabla de "Songs". Esto nos permite obtener el nombre de la playlist junto con el nombre de todas las canciones en esa playlist.
 
+
 #### Ejemplo Uso combinado de WITH y JOIN
 
 informe de las playlists junto con los nombres de los artistas y el nombre de las canciones, pero solo para playlists que contengan más de 50 canciones.
@@ -281,7 +283,6 @@ Explicación de la Consulta
         Primero se realiza un JOIN entre SelectedPlaylists y playlist_songs para vincular las playlists seleccionadas con sus correspondientes canciones usando pid y playlist_id.
         Luego, se hace un segundo JOIN con la tabla songs para obtener los detalles de cada canción usando song_id.
 
-
  ### 📗[42 preguntas](#sección-5)
  3 - 4 - 3
 
@@ -293,6 +294,7 @@ Explicación de la Consulta
 5. Contar el número total de canciones
 6. Contar el número total de canciones únicas
 7. Seleccionar todas las canciones de un artista específico y en cuantas listas aparece -> Utilizar un JOIN
+
 
 ```
 %%sql  
@@ -307,6 +309,7 @@ FROM playlists a
 INNER JOIN canciones_dylan b
 ON a.pid = b.pid
 ```
+
 
 8. Seleccionar todas las canciones de un álbum específico y en cuantas listas aparece -> Utilizar un JOIN
 9. Nombres de las 10 canciones mas largas en duración
@@ -351,8 +354,9 @@ SELECT
     AVG(num_followers) AS promedio_f
 FROM CeliaCruz
 GROUP BY popularidad;
-11. Seleccionar las canciones que duran más de la duración promedio de todas las canciones
 ```
+
+11. Seleccionar las canciones que duran más de la duración promedio de todas las canciones
 
 - Bloque 3 -> Utilizar JOIN
 1. Calcular la duración total y promedio de todas las canciones en una playlist específica
