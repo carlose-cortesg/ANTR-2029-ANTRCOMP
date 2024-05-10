@@ -213,6 +213,21 @@ En este ejemplo, estamos combinando las tablas de "Playlists" y "Songs" utilizan
 5. Contar el número total de canciones
 6. Contar el número total de canciones únicas
 7. Seleccionar todas las canciones de un artista específico y en cuantas listas aparece -> Utilizar un JOIN
+
+```
+%%sql  
+
+WITH canciones_dylan AS (
+SELECT DISTINCT pid
+FROM song
+WHERE artist_name = 'Bob Dylan' )
+
+SELECT COUNT(*)
+FROM playlists a
+INNER JOIN canciones_dylan b
+ON a.pid = b.pid
+```
+
 8. Seleccionar todas las canciones de un álbum específico y en cuantas listas aparece -> Utilizar un JOIN
 9. Nombres de las 10 canciones mas largas en duración
 10. Contar el número total de canciones en una playlist específica
@@ -223,6 +238,7 @@ En este ejemplo, estamos combinando las tablas de "Playlists" y "Songs" utilizan
 15. Seleccionar las playlists que tienen mas seguidores de que canciones
 
 - Bloque 2
+
 1. Calcular la duración total de todas las canciones en una playlist específica
 2. Obtener la duración promedio de las canciones de las 10 playlists con más canciones
 3. Encontrar la cantidad máxima de tracks en todas las playlists
@@ -232,9 +248,31 @@ En este ejemplo, estamos combinando las tablas de "Playlists" y "Songs" utilizan
 7. Contar la cantidad de playlists que contienen canciones de más de un álbum -> Utilizar HAVING
 8. Calcular la cantidad total de canciones en cada playlist y ordenarlas de mayor a menor
 9. Número de canciones por lista -> Utilizar CASE
-10. Promedio de duración de canciones por número de seguidores -> utilizar doble CASE
-11. Seleccionar las canciones que duran más de la duración promedio de todas las canciones
+10. Promedio de duración de canciones por número de seguidores 
 
+%%sql 
+
+```
+WITH CeliaCruz AS (
+    SELECT
+        pid,
+        num_followers,
+        CASE
+            WHEN num_followers < 100 THEN 'Baja'
+            WHEN num_followers >= 100 AND num_followers <= 500 THEN 'Media-Baja'
+            WHEN num_followers >= 500 AND num_followers <= 1500 THEN 'Media-Alta'
+            ELSE 'Alta'
+        END AS popularidad
+    FROM playlists
+)
+
+SELECT
+    popularidad,
+    AVG(num_followers) AS promedio_f
+FROM CeliaCruz
+GROUP BY popularidad;
+11. Seleccionar las canciones que duran más de la duración promedio de todas las canciones
+```
 
 - Bloque 3 -> Utilizar JOIN
 1. Calcular la duración total y promedio de todas las canciones en una playlist específica
