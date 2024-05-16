@@ -1,5 +1,5 @@
 # Entrega 1 JFBC 
-## Prueba de encabezado
+
 Hola! 🦦 mi nombre es Juan Francisco Bernal
 También me dicen Pacho 🦧
 Antropologo 😵‍💫 colombiano de noveno semestre
@@ -13,3 +13,4 @@ El link del ultimo proyecto en el que trabajé [ElConviteUrbano](https://elconvi
 El link de mi Linkedin [Linkedin](www.linkedin.com/in juan-francisco-bernal-calderón-b94692243)
 ---
 Y el link del mejor rapero de Bogotá [Youtube](https://www.youtube.com/watch?v=F6pEkDaNxFQ)
+
