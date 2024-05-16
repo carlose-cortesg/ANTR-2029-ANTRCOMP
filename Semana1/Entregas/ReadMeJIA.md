@@ -86,4 +86,26 @@ Cumbia
 me gusta resto tmb el tinto
 💙🤍💙🤍💙🤍
 solo millos loka
+
 [Medio audiovisual] (https://youtu.be/_alCepCPoz4?si=DCnCjCN2sNgnY7aS)
+te estoy mandando este nuevo commit porque nos dijeron que tocaba mandar otro commit
+
+no se que más decir
+
+voy a poner más links de videos bacanos
+
+[Betty la fea] (https://www.youtube.com/watch?v=2zzWG6EB5xM&list=PLARNzRPnDAQ32ihLCUMmd5FU2hMRn3bg5)
+
+[Duna](https://www.youtube.com/watch?v=rNl_KeBcK-M)
+
+Lisan Al Ghaib
+
+[Que viva la música](https://www.youtube.com/watch?v=44cV5iCZA4o)
+
+[faraon love shady](https://www.google.com/search?gs_ssp=eJzj4tVP1zc0TMuNLzZKKzY3YPTiTkssSszPU8jJL0sFAHsUCPk&q=faraon+love&oq=faraon+l&gs_lcrp=EgZjaHJvbWUqBwgBEC4YgAQyCggAEAAY4wIYgAQyBwgBEC4YgAQyBggCEEUYOTIHCAMQABiABDIHCAQQABiABDIHCAUQABiABDIHCAYQABiABDIHCAcQABiABDIHCAgQABiABDIHCAkQABiABNIBCTc2MjY0ajBqNKgCALACAA&sourceid=chrome&ie=UTF-8)
+
+[Opio en las nubes](https://www.youtube.com/watch?v=bNHFmvUw9Bw)
+
+había una vez un pastor aleman
+y nadie le entendió la misa
+
