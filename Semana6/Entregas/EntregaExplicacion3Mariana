@@ -1,0 +1,311 @@
+Primero hice una cuenta en Colab Google. Creé un Notebook nuevo. De ahí, puse el comando:
+from google.colab import drive
+drive.mount('/content/drive')
+Después de eso, el comando que puse porque no me dejaba subir la base y esto decía en google que hiciera:
+%load_ext sql
+Posteriormente, me fui al ícono de carpeta en el notebook, busqué la base de datos, le di clic derecho a los tres puntos y, donde decía copiar ruta de acceso, le di copiar. 
+Luego escribí el comando para subir la base de datos de música, y reemplacé del drive/ en adelante con la ruta de acceso copiada. ¡Sirvió!
+%sql  sqlite:////content/drive/My Drive/music_smaller_10000.db.db
+A partir de esto empecé el trabajo con SQL que es un lenguaje para hablar con bases de datos. 
+La base de datos subida no la puedo ver, sino que tengo que acceder a ella con SQL. 
+Como no sabía qué tenía la tabla de datos, busqué en chat gpt cómo lograr esto y me indicó el siguiente comando para que me mostrara las tablas. 
+%sql SELECT name, type FROM sqlite_master WHERE type='table' AND name NOT LIKE 'sqlite_%';
+El resultado fue: 
+ sqlite:////content/drive/MyDrive/music_smaller_10000
+ * sqlite:////content/drive/MyDrive/music_smaller_10000.db
+Done.
+name	type
+slice_time	table
+playlists	table
+song	table
+Esto quiere decir que tiene tres tablas: slice time, playlists y song. 
+De ahí, quería ver qué datos tenía la tabla de Playlist:
+Para esto, imité la fórmula anterior, pero con los requisitos que necesitaba. 
+%sql SELECT * FROM playlists limit 5
+Ahora que  sabía los datos que se encuentran en la tabla 
+(slice/pid/modified_at/num_tracks/num_albums/num_followers/num_edits/duration_ms/num_artists)
+Después, puse el comando para responder a la pregunta 2 del bloque 1 como práctica: Contar el número total de playlists -> Utilizar COUNT()
+%sql  SELECT COUNT(*) AS total_playlists FROM playlists 
+(En otras palabras, seleccione el conteo de todas las filas, y nómbrelo total_playlists de la tabla playlists)
+El resultado fue:
+sqlite:////content/drive/MyDrive/music_smaller_10000
+ * sqlite:////content/drive/MyDrive/music_smaller_10000.db
+Done.
+total_playlists
+8000
+Es decir, que hay 8000 playlists en la tabla
+
+*RESPUESTA PREGUNTAS TAREA*
+
+I. Del primer bloque respondí las siguientes tres preguntas:
+
+a) Seleccionar las playlists que tienen más de cierta cantidad de seguidores (#4)
+Para esto, utilicé la fórmula:
+%sql SELECT COUNT(*) FROM playlists WHERE (num_followers>5) 
+Donde indico que me seleccione las filas de la tabla de playlists donde el número de followers es mayor  5. 
+El reusltado es:
+ * sqlite:////content/drive/MyDrive/music_smaller_10000.db
+Done.
+COUNT(*)
+149
+Es decir, que hay 149 playlists con más de cinco seguidores.
+De ahí, para ser más específica, pedí que me seleccionara las primeras 10 playlists con más seguidores con esta fórmula:
+%sql SELECT * FROM playlists WHERE (num_followers>5) ORDER BY num_followers desc LIMIT 10 
+Donde a la fórmula se le añade que organiza las playlists por el número de followers en orden descendente y las limite a las primeras 10.
+Quité el paréntesis del asterisco porque así me indicaba colab. 
+Esto me mostró:
+* sqlite:////content/drive/MyDrive/music_smaller_10000.db
+Done.
+slice	pid	modified_at	num_tracks	num_albums	num_followers	num_edits	duration_ms	num_artists
+7000-7999	7215	1501804800	52	46	15842	2	11005740	41
+2000-2999	2957	1509321600	50	47	2699	14	11765108	46
+0-999	765	1499040000	81	37	1038	15	15112167	59
+9000-9999	9307	1502323200	104	32	58	54	26797359	8
+3000-3999	3305	1426723200	36	28	53	9	7720923	25
+3000-3999	3089	1507939200	149	107	52	66	31986562	59
+3000-3999	3980	1462060800	111	107	52	9	25178698	96
+2000-2999	2416	1482192000	24	19	44	5	5530418	16
+7000-7999	7206	1480032000	36	34	44	13	8238206	33
+2000-2999	2282	1495584000	35	27	43	13	8273427	23
+
+b) Contar el número total de canciones únicas (#6)
+Como no había revisado la tabla de canciones, utilicé una fórmula sencilla para ver los datos. 
+%sql SELECT * FROM song limit 5 (Seleccione todas las filas de la tabla de canciones y limítelas por 5)
+De ahí pude ver cómo estaba hecha la tabla:
+* sqlite:////content/drive/MyDrive/music_smaller_10000.db
+Done.
+track_uri	pid	pos	artist_name	artist_uri	track_name	album_uri	duration_ms	album_name
+spotify:track:4SDywo3ykB2PEthjXvo1UP	6	0	Creedence Clearwater Revival	spotify:artist:3IYUhFvPQItj6xySrBmZkd	I Put A Spell On You	spotify:album:7oIftk0P8cViwNpNEdCYl2	271786	Creedence Clearwater Revival
+spotify:track:229SqGbacrLSBfb9XfJczF	6	1	STRFKR	spotify:artist:2Tz1DTzVJ5Gyh8ZwVr6ekU	Bury Us Alive	spotify:album:5pfqk4oFycMVynOD8S2Cqs	190360	Reptilians
+spotify:track:0orNm6qQT2B5WFi0l7l3PV	6	2	311	spotify:artist:41Q0HrwWBtuUkJc7C1Rp6K	Jackolantern's Weather	spotify:album:6VIeIM5tetuv7FrYxISffU	204160	311
+spotify:track:1hWQvA6oGVJ2mAVsZ59AaV	6	3	Nathaniel Rateliff & The Night Sweats	spotify:artist:02seUFsFQP7TH4hLrTj77o	S.O.B.	spotify:album:2UCyiayMoJOwBilPLQPQvK	247612	Nathaniel Rateliff & The Night Sweats
+spotify:track:56SkdBKyR2zOkjk6wVFI9s	6	4	Toadies	spotify:artist:2QMMktUMtwMSwUZATX1cRO	Possum Kingdom	spotify:album:7tFTqVGHceSlXOaz8IylBN	309573	Rubberneck
+
+Luego, identifiqué que para responder a la pregunta B (6) del Bloque 1 debía hacerlo con la columna de track_uri que es la que,
+como es única a cada canción, no debería repetirse. A partir de esto, construí la fórmula:
+%sql SELECT COUNT (DISTINCT track_uri) FROM song (Es decir, seleccione la cuenta de track_uri distintivos en la tabla de canciones)
+Esto resultó:
+* sqlite:////content/drive/MyDrive/music_smaller_10000.db
+Done.
+COUNT (DISTINCT track_uri)
+145127
+Hay 145,127 canciones únicas en Spotify. 
+Después, para comprobar el resultado verifiqué con dos fórmulas que hacen el conteo de la cantidad de canciones en total (sin importar que se repitan) 
+y el pid que muestra la cantidad de playlists (o que hay canciones en todas esas playlists). 
+Si el resultado era distinto, significaba que la fórmula probablemente estaba bien. 
+i. * sqlite:////content/drive/MyDrive/music_smaller_10000.db
+Done.
+COUNT (*)
+529108
+Hay un total de 529,108 canciones, incluyendo las repetidas, lo que difere del total de canciones únicas.
+ii. * sqlite:////content/drive/MyDrive/music_smaller_10000.db
+Done.
+COUNT (DISTINCT pid)
+8000
+Hay un total de 8,000 playlists en las que se encuentran canciones. 
+
+c) Seleccionar la playlist con un pid específico:incluyendo las canciones -> Utilizar un JOIN (#3)
+Para responder esta pregunta construí la siguiente fórmula
+%sql SELECT * FROM playlists JOIN song ON playlists.pid = song.pid WHERE playlists.pid = 999 LIMIT 5
+Esta fórmula pide que se seleccionen todas las columnas las tablas de playlists unida a la de song,
+y que las una utilizando la columna playlists.pid que debe ser igual a la columna de song.pid cuando la playlist.pid es número 999,
+y limite las canciones mostradas a 25. 
+Este fue el resultado:
+ * sqlite:////content/drive/MyDrive/music_smaller_10000.db
+Done.
+slice	pid	modified_at	num_tracks	num_albums	num_followers	num_edits	duration_ms	num_artists	track_uri	pid_1	pos	artist_name	artist_uri	track_name	album_uri	duration_ms_1	album_name
+0-999	999	1507766400	44	43	1	34	9065801	37	spotify:track:3rUTBx7gmn1IAAwsrjtnO0	999	0	Pvris	spotify:artist:6oFs3qk4VepIVFdoD4jmsy	Mind over Matter (Acoustic)	spotify:album:33oxbqzo7poSO2IbSMqrPS	203649	Acoustic
+0-999	999	1507766400	44	43	1	34	9065801	37	spotify:track:6zYqyOJuyXDOvWJwKkZ8tg	999	1	Ingrid Michaelson	spotify:artist:2vm8GdHyrJh2O2MfbQFYG0	You and I	spotify:album:7o2VLivg95UduHjTMTIEIf	148400	Be OK
+0-999	999	1507766400	44	43	1	34	9065801	37	spotify:track:0nRuVPZx2iA3KWR4xSzryl	999	2	Troye Sivan	spotify:artist:3WGpXCj9YhhfX11TToZcXP	TALK ME DOWN	spotify:album:5ouTDazE4LF9bVJPx1nlgW	237464	Blue Neighbourhood
+0-999	999	1507766400	44	43	1	34	9065801	37	spotify:track:2pbxqEYiXJTvFsybGGgSAi	999	3	City and Colour	spotify:artist:74gcBzlQza1bSfob90yRhR	Un-Thinkable - I'm Ready	spotify:album:2wCLwVcPgBG1UHszyqV6EA	297133	Covers, Pt. 3
+0-999	999	1507766400	44	43	1	34	9065801	37	spotify:track:4v0SA7SC65KJ9ToJm15qCk	999	4	Skylar Grey	spotify:artist:4utLUGcTvOJFr6aqIJtYWV	Addicted To Love	spotify:album:41MBuPQn9Pha9F7hc4vLLR	203600	Addicted To Love
+Ahí, nos está mostrando la información de la playlist identificada como 999, y cinco canciones encontradas en esta. 
+
+
+II. Del segundo bloque respondí las siguientes cuatro preguntas:
+
+d) Encontrar la cantidad máxima de tracks en todas las playlists (#3)
+Para esto utilicé la fórmula
+%sql SELECT MAX(num_tracks) FROM playlists 
+Donde pido que selecciona el número máximo de tracks en la tabla de playlists. 
+Esto mostró:
+ * sqlite:////content/drive/MyDrive/music_smaller_10000.db
+Done.
+MAX(num_tracks)
+250
+Entonces, la cantidad máxima de tracks en todas las plyalists es de 250 canciones. 
+
+e) Calcular la suma total de duraciones de todas las canciones de un artista específico (#6)
+Para responder a esta pregunta, me di cuenta que el conteo debía igualar el nombre de artistas a un mismo artista específico del que hiciera el conteo
+Entonces, construí la fórmula pensando en eso
+%sql SELECT SUM(duration_ms) FROM song WHERE artist_name = 'Taylor Swift'
+En otras palabras, seleccione la suma de duración de milisegundos de las canciones de la tabla song, donde el nombre del artista sea igual a Taylor Swift.
+El resultado fue este:
+* sqlite:////content/drive/MyDrive/music_smaller_10000.db
+Done.
+SUM(duration_ms)
+193252463
+Es decir, que el total de milisegundos de las canciones en playlists en las que está Taylor Swift es de 193'252, 463. 
+Sin embargo, esta suma incluye las canciones repetidas entre playlists, por lo que quise hacer otra fórmula donde el conteo sea de canciones únicas. 
+Me ayudé de chat gpt. Para lograrlo. 
+%sql SELECT SUM(duration_ms) FROM (SELECT DISTINCT track_uri, duration_ms FROM song WHERE artist_name = 'Taylor Swift') song 
+Aquí, lo que digo es básicamente: seleccione la suma de la duración de milisegundos de canciones, de la tabla de song,
+donde cuente únicamente la duración de milisegundos de  canciones distintivas (track_uri), 
+donde el artista es igual a Taylor Swift. 
+Para chequear lo que estaba haciendo con la función DISTINCT, copié y pequé únicamente lo del entre paréntesis, 
+y le añadí track name para verificar que sí fueran sólo canciones de Taylor. También, las ordené en orden descendente según los milisegundos. 
+%sql SELECT DISTINCT track_uri, track_name, duration_ms FROM song WHERE artist_name = 'Taylor Swift' ORDER BY duration_ms desc
+Efectivamente, sólo mostraba sus canciones. 
+* sqlite:////content/drive/MyDrive/music_smaller_10000.db
+Done.
+track_uri	track_name	duration_ms
+spotify:track:7hZuICN5eaCuQyp443RCt6	Dear John	403920
+spotify:track:4h0EXpatqJImv4VRgvX6po	Last Kiss	367133
+spotify:track:1IsquhJFJ0qcFZI7FeAEuN	Back To December/Apologize/You're Not Sorry - Live/2011/Medley	362826
+spotify:track:10eBRyImhfqVvkiVEGf0N0	Enchanted	352186
+spotify:track:6505MLhnqTDDg4tjoUz2Wp	Better Than Revenge - Live/2011	344573
+spotify:track:1aBJNc2thaKyh5THWzIqHX	Sparks Fly - Live/2011	336826
+spotify:track:4XMP3zVxrnr58T0tjIHvpR	All Too Well	327893
+
+Volviendo a la respuesta de la pregunta, para simplificar el entendimiento de la suma, decidí cambiar los milisegundos a minutos de canciones. 
+Esto lo hice, añadiendo un /60,000 después de la indicación de suma. 
+%sql SELECT SUM(duration_ms) /60000 FROM (SELECT DISTINCT track_uri, duration_ms FROM song WHERE artist_name = 'Taylor Swift') song
+Esto resultó: 
+* sqlite:////content/drive/MyDrive/music_smaller_10000.db
+Done.
+SUM(duration_ms) /60000
+426
+Así que, la suma total de duración de canciones en playlists de Taylor Swift es de 426 minutos, o 7hr. 
+
+f) Número de canciones por lista -> Utilizar CASE (#9)
+Para responderla hice la fórmula:
+%sql SELECT pid, num_tracks, CASE WHEN num_tracks <30 THEN 'BAJA'WHEN num_tracks <=40 THEN 'MEDIA' ELSE 'ALTA' END AS tracks_num_quuantity FROM playlists LIMIT 15 
+Brevemente, seleccione todos los playlists ID, y la cantidad de canciones, en el caso en que el número de tracks sea menor a 30, nómbrelo BAJA; 
+cuando sea menor o igual a 40, nómbrelo MEDIA; y cuando sea otra cantidad (o sea mayor a 40) llámelo ALTA. 
+Terminar la acción creando una nueva columna llamada tracks_num_quuantity de la tabla de playlists, limitando a 15 muestras.
+Esto mostró: 
+* sqlite:////content/drive/MyDrive/music_smaller_10000.db
+Done.
+pid	num_tracks	tracks_num_quuantity
+0	52	ALTA
+1	39	MEDIA
+2	64	ALTA
+3	126	ALTA
+4	17	BAJA
+5	80	ALTA
+6	16	BAJA
+7	53	ALTA
+8	46	ALTA
+9	21	BAJA
+10	72	ALTA
+11	134	ALTA
+12	9	BAJA
+13	13	BAJA
+14	103	ALTA
+Después, para explorar más esta función, quise agrupar el número de playlists con cantidades BAJA, MEDIA y ALTA, utilizando esta fórmula (me ayudé de las correcciones de chat gpt):
+%sql SELECT CASE WHEN num_tracks <30 THEN 'BAJA'WHEN num_tracks <=40 THEN 'MEDIA' ELSE 'ALTA' END AS tracks_num_quuantity, COUNT(pid) AS num_playlists FROM playlists GROUP BY tracks_num_quuantity
+En esta, ya no necesito el pid al comienzo, sino sólo el CASE. Copié y pegué hasta el END AS, y luego añadí la intrucción que contara las pid, 
+los nombrara num_playlist, de la tabla de playlists, y agrupara los resultados según el track_num_quantity
+ * sqlite:////content/drive/MyDrive/music_smaller_10000.db
+Done.
+tracks_num_quuantity	num_playlists
+ALTA	4627
+BAJA	2369
+MEDIA	1004
+Lo anterior, muestra la cantidad de playlists con números bajos, medios y altos de canciones según mi criterio.
+
+g) Encontrar la duración más larga y más corta de todas las canciones (#5)
+Para responder esta pregunta utilicé las funciones de max y min, entonces construí esta fórmula: 
+%sql SELECT MAX(duration_ms)/60000, MIN(duration_ms) FROM song WHERE duration_ms is not 0
+Es decir, seleccione la duración máxima de canciones en milisegundos (y divídala en 60,000 para poder comprender el resultado en términos de minutos)
+Y seleccione la duración mínima de canciones en milisegundos. 
+Añadí en esta segunda operación que el resultado no fuera 0, porque originalmente me mostraba que el mínimo era cero, y quería ver la cantidad más corta diferente a 0
+Esto mostró: 
+* sqlite:////content/drive/MyDrive/music_smaller_10000.db
+Done.
+MAX(duration_ms)/60000	MIN(duration_ms)
+87	186
+Luego, quería ver cómo se llamaban las canciones con duraciones más largas y más cortas respectivamente,
+Por lo que edité la fórmula de esta manera:
+%sql SELECT track_name, duration_ms FROM song WHERE duration_ms= (SELECT MAX(duration_ms) FROM song)
+OR duration_ms= (SELECT MIN(duration_ms) FROM song WHERE duration_ms is not 0)
+En este caso, digo que seleccione de las columnas de track_name y duration_ms en la tabla de song todas las filas en las que la duración es la máxima, o la mínima. 
+(Sólo mostrará una fila y otra respectivamente, porque sólo una cantidad cumple con el requisito de máxima y mínima). 
+El resultado fue: 
+* sqlite:////content/drive/MyDrive/music_smaller_10000.db
+Done.
+track_name	duration_ms
+Oxygen - Radio Edit	186
+Heavy Rains with Thunder and Lightning - Natural Sounds of Nature	5279768
+La canción más larga es Heavy Rains with Thunder and Lightning (que curiosamente he escuchado para dormir) y la más corta es Oxygen-Radio edit. 
+
+
+III. Del tercer bloque elegí las siguientes tres preguntas.
+
+h) Calcular la duración total y promedio de todas las canciones en una playlist específica (#1)
+Dividí la instrucción en dos partes. Calcular la duración y luego el promedio. 
+Primero, calculé la duración con esta fórmula. 
+%sql SELECT SUM(duration_ms)/60000 FROM song WHERE pid is 999
+Aquí, básicamente digo que me seleccione la suma de duración de canciones (dividida en 60000 para que me muestre los minutos) de la tabla de song donde el playlist id es 999
+Esto me mostró:
+* sqlite:////content/drive/MyDrive/music_smaller_10000.db
+Done.
+SUM(duration_ms)/60000
+151
+Entonces, la duración en minutos de la playlist 999 es de 151
+
+Luego, calculé el promedio de todas las canciones con esta fórmula:
+%sql SELECT AVG(duration_ms)/60000 FROM song WHERE pid is 999
+En breve, calcule el promedio de duración de todas las canciones en minutos de la tabla de song donde el pid es 999
+Esto mostró:
+ * sqlite:////content/drive/MyDrive/music_smaller_10000.db
+Done.
+AVG(duration_ms)/60000
+3.4340155303030304
+El promedio de duración en minutos de las canciones en esa playlist 999 es de 3.43. 
+
+Po último, combiné ambas fórmulas para que me mostrara ambas la suma y el promedio:
+%sql SELECT SUM(duration_ms)/60000 as total_duration, AVG(duration_ms)/60000 as average_duration FROM song WHERE pid is 999
+Aquí, indico que haga la suma y la nombre como total_duration, luego saque el promedio y lo nombre average_duration en la tabla de song con el pid 999.
+Este es el resultado:
+* sqlite:////content/drive/MyDrive/music_smaller_10000.db
+Done.
+total_duration	average_duration
+151	3.4340155303030304
+
+i) Obtener el promedio de canciones por playlist (#5)
+Para responder a esta pregunta utilicé la función de average. Así quedó la fórmula:
+%sql SELECT AVG(num_tracks) as average_tracks_per_playlist FROM playlists
+Es decir, calculce el promedio de número de tracks en toodas las playlist de la tabla de playlists, y nómbrelo cómo: average_tracks_per_playlist
+Esto mostró:
+* sqlite:////content/drive/MyDrive/music_smaller_10000.db
+Done.
+average_tracks_per_playlist
+66.1385
+El promedio de canciones por playlist es de 66.1385 canciones
+
+j) Calcular la duración total de todas las canciones en playlists con más de 50 tracks (#9)
+Para responder a esta instrucción utilicé la función de suma, combinada con el condicional WHERE. Así quedó:
+%sql SELECT SUM(duration_ms)/(60000*60) as total_duration_playlists_with_more_than_50_tracks FROM playlists WHERE num_tracks>50
+Lo que indico es que haga la suma de la duración de todas las canciones (pero pasándola de milisegundos a horas), 
+la nombre  total_duration_playlists_with_more_than_50_tracks, de la tabla de playlists, cuando estas playlists tengan más de 50 tracks.
+Este fue el resultado:
+* sqlite:////content/drive/MyDrive/music_smaller_10000.db
+Done.
+total_duration_playlists_with_more_than_50_tracks
+27135
+Entonces, la suma de todas las canciones en playlists con más de 50 tracks es de 27,135 horas. 
+Si quisiera ver esta suma en años, así la cambiaría: 
+%sql SELECT SUM(duration_ms)/(60000*60*24*365) as total_duration_playlists_with_more_than_50_tracks FROM playlists WHERE num_tracks>50
+El resultado es:
+* sqlite:////content/drive/MyDrive/music_smaller_10000.db
+Done.
+total_duration_playlists_with_more_than_50_tracks
+3
+3 años entre todas estas canciones. 
+
+Muchas gracias por la lectura de mí trabajo. Fue duro, pero a medida que iba respondiendo creo que fui entendiendo lo básico del lenguaje sql. 
+En cualquier caso, reconozco que me guié de chat gpt y un amigo cuando no me salía la fórmula luego de varios intentos, o no entendía cómo utilizar una función. 
+Pero su ayuda fue únicamente para guiar mi trabajo, y creo que le pude ir cogiendo el tiro.
+Sobre todo, me di cuenta en el tercer bloque donde me costó mucho menos responder. 
+:). 
