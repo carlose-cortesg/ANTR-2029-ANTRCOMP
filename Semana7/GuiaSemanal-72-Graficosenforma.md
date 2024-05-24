@@ -81,7 +81,7 @@ query = "SELECT * FROM playlists"
 datos = pd.read_sql_query(query, connection)
 
 # Mostrar cómo queda el archivo
-print(df.head())
+print(datos.head())
 
 # Cerrar la conexión
 connection.close()
