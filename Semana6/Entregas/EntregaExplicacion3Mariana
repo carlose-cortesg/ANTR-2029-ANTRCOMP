@@ -1,3 +1,6 @@
+Archivo Colab:
+
+
 Primero hice una cuenta en Colab Google. Creé un Notebook nuevo. De ahí, puse el comando:
 from google.colab import drive
 drive.mount('/content/drive')
@@ -309,3 +312,5 @@ En cualquier caso, reconozco que me guié de chat gpt y un amigo cuando no me sa
 Pero su ayuda fue únicamente para guiar mi trabajo, y creo que le pude ir cogiendo el tiro.
 Sobre todo, me di cuenta en el tercer bloque donde me costó mucho menos responder. 
 :). 
+
+
