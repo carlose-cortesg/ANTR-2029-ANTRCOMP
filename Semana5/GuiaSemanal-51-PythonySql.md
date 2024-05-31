@@ -99,7 +99,47 @@ LIMIT 10
 
 
  ### 📗[42 preguntas](#sección-6)
- 1. Top 20 de Playlists mas Recientes
- 2. Top 10 de Playlists mas largas 
- 3. Top 10 de Canciones que mas se repiten
+
+- Bloque 1
+1. Top 20 de Playlists mas Recientes -> Utilizar modified at mayor que
+2. Contar el número total de playlists -> Utilizar COUNT() 
+3. Seleccionar la playlist con un pid específico:incluyendo las canciones -> Utilizar un JOIN
+4. Seleccionar las playlists que tienen más de cierta cantidad de seguidores
+5. Contar el número total de canciones
+6. Contar el número total de canciones únicas
+7. Seleccionar todas las canciones de un artista específico y en cuantas listas aparece -> Utilizar un JOIN
+8. Seleccionar todas las canciones de un álbum específico y en cuantas listas aparece -> Utilizar un JOIN
+9. Nombres de las 10 canciones mas largas en duración
+10. Contar el número total de canciones en una playlist específica
+11. Contar cuantas listas existen por número de canciones -> Utilizar CASE
+12. Seleccionar todas las playlists que contienen una canción específica
+13. Contar el número de playlists que contienen canciones de un cierto artista
+14. Seleccionar las playlists que tienen más canciones que álbumes
+15. Seleccionar las playlists que tienen mas seguidores de que canciones
+
+- Bloque 2
+1. Calcular la duración total de todas las canciones en una playlist específica
+2. Obtener la duración promedio de las canciones de las 10 playlists con más canciones
+3. Encontrar la cantidad máxima de tracks en todas las playlists
+4. Contar la cantidad total de playlists que contienen más de 10 canciones -> Utilizar WHERE
+5. Encontrar la duración más larga y más corta de todas las canciones
+6. Calcular la suma total de duraciones de todas las canciones de un artista específico
+7. Contar la cantidad de playlists que contienen canciones de más de un álbum -> Utilizar HAVING
+8. Calcular la cantidad total de canciones en cada playlist y ordenarlas de mayor a menor
+9. Número de canciones por lista -> Utilizar CASE
+10. Promedio de duración de canciones por número de seguidores -> utilizar doble CASE
+11. Seleccionar las canciones que duran más de la duración promedio de todas las canciones
+
+
+- Bloque 3 -> Utilizar JOIN
+1. Calcular la duración total y promedio de todas las canciones en una playlist específica
+2. Calcular la duración total de todas las canciones de un artista específico en todas las playlists
+3. Contar la cantidad de playlists que contienen más de un álbum diferente
+4. Calcular la cantidad total de canciones en cada playlist y ordenarlas de mayor a menor
+5. Obtener el promedio de canciones por playlist
+6. Contar la cantidad total de playlists que contienen más de 10 canciones -> Utilizar un COUNT(*)
+7. Contar la cantidad de artistas que tienen mas de una canción vs los que tienen sólo una canción
+8. Contar la cantidad de playlists que contienen más de una canción de un álbum específico
+9. Calcular la duración total de todas las canciones en playlists con más de 50 tracks
+
 

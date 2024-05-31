@@ -86,6 +86,7 @@ Cumbia
 me gusta resto tmb el tinto
 💙🤍💙🤍💙🤍
 solo millos loka
+
 [Medio audiovisual] (https://youtu.be/_alCepCPoz4?si=DCnCjCN2sNgnY7aS)
 te estoy mandando este nuevo commit porque nos dijeron que tocaba mandar otro commit
 
@@ -107,3 +108,4 @@ Lisan Al Ghaib
 
 había una vez un pastor aleman
 y nadie le entendió la misa
+
